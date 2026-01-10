@@ -1,3 +1,4 @@
+<%@ page isELIgnored="false" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,6 +13,7 @@
 </head>
 <body>
 
+    <small>${msg}</small>
     <div class="container mt-5">
         <form action="processform" method="post">
             <div class="form-group">

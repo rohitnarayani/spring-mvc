@@ -1,8 +1,27 @@
 package com.spring.model;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String email;
+    private String password;
+
+    // added getter/setter for id
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getPassword() {
         return password;
@@ -19,8 +38,6 @@ public class User {
                 ", password='" + password + '\'' +
                 '}';
     }
-
-    private String password;
 
     public String getEmail() {
         return email;
