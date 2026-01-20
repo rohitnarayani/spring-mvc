@@ -31,10 +31,8 @@ public class ContactController {
             return "contact";
         }
         int createdUser = this.userService.createUser(user);
-
         return "success";
     }
-
     /*
     @RequestMapping(path="/processform",method= RequestMethod.POST)
     public String processForm(@RequestParam(value = "email")String email, @RequestParam("pwd")String password, Model model){
